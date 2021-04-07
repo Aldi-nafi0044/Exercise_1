@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/multicolor"
+        android:contentDescription="@string/todo" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imagetransparan"
+            android:layout_width="377dp"
+            android:layout_height="585dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.493"
+            app:srcCompat="@android:drawable/screen_background_light_transparent" />
+
+
+
+        <ImageView
+            android:id="@+id/imageuser"
+            android:layout_width="137dp"
+            android:layout_height="118dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="@+id/imagetransparan"
+            app:layout_constraintEnd_toEndOf="@+id/imagetransparan"
+            app:layout_constraintStart_toStartOf="@+id/imagetransparan"
+            app:layout_constraintTop_toTopOf="@+id/imagetransparan"
+            app:layout_constraintVertical_bias="0.057"
+            app:srcCompat="@drawable/ic_launcher_round" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutEmail"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toBottomOf="@+id/imagetransparan"
+            app:layout_constraintEnd_toEndOf="@+id/imagetransparan"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="@+id/imagetransparan"
+            app:layout_constraintTop_toBottomOf="@+id/imageuser"
+            app:layout_constraintVertical_bias="0.117"
+            android:background="#B1E8ED">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E6F8F9"
+                android:hint="@string/temail"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutpass"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:background="#B1E8ED"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toBottomOf="@+id/imagetransparan"
+            app:layout_constraintEnd_toEndOf="@+id/imagetransparan"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="@+id/imagetransparan"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail"
+            app:layout_constraintVertical_bias="0.103"
+            app:passwordToggleEnabled="true"
+            app:counterEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextpass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E6F8F9"
+                android:hint="@string/tpassword"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/blogin"
+            android:layout_width="162dp"
+            android:layout_height="41dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/blogin"
+            android:background="@color/unguver1"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/imagetransparan"
+            app:layout_constraintEnd_toEndOf="@+id/imagetransparan"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/imagetransparan"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutpass"
+            app:layout_constraintVertical_bias="0.21" />
+
+        <Button
+            android:id="@+id/bsignin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:hint="@string/bregester"
+            android:textColor="@color/black"
+            app:backgroundTint="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imagetransparan"
+            app:layout_constraintEnd_toEndOf="@+id/imagetransparan"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/imagetransparan"
+            app:layout_constraintTop_toBottomOf="@+id/blogin"
+            app:layout_constraintVertical_bias="0.215" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
